@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+
+
+:root {
+    --dark-one: #333;
+    --dark-two: #7a7a7a;
+    --main-color: #784cfb;
+    --hover-color: #602bff;
+    --light-one: #fff;
+    --light-two: #f9fafb;
+    --light-three: #fcf4b6;
+}
+
+/* General Style */
+
+*, *::before, *::after {
+   margin: 0; 
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body, textarea, input {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 92rem;
+    margin: auto;
+    padding: 4rem;
+    position: relative;
+    z-index: 50;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 1rem 0;
+}
+
+.button {
+    color: var(--light-one);
+    font-size: 1rem;
+    background-color: var(--main-color);
+    padding: 0.9rem 1.5rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.button:hover {
+    color: var(--light-one);
+    background-color: var(--hover-color);
+}
+
+.colum-1 {
+    margin-right: 1.5rem;
+}
+
+.colum-2 {
+    margin-left: 1.5rem;
+}
+
+.image {
+    position: relative;
+}
+
+.title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    position: relative;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    position: relative;
+}
+
+/* End General Style */
+
+
+
+/* Header Style */
+
+/* Remember! nav .container is not going to work */
+
+header {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--light-three);
+}
+
+nav {
+    position: relative;
+    z-index: 50;
+    width: 100%;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+}
+
+.links ul {
+    display: flex;
+    list-style: none;
+}
+
+
+.links a {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    color: var(--dark-one);
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.links a.active {
+    color: var(--light-one);
+    font-size: 1rem;
+    background-color: var(--main-color);
+    padding: 0.9rem 1.5rem;
+    border-radius: 2rem;
+    margin-left: 1rem;
+}
+
+.links a:hover {
+    color: var(--main-color);
+}
+
+.links a.active:hover {
+    color: var(--light-one);
+    background-color: var(--hover-color);
+}
+
+.header-content .container.grid-2{
+    min-height: calc(100vh - 4rem);
+    grid-template-columns: 2.5fr 3.5fr;
+    padding-bottom: 3rem;
+}
+
+.header-title {
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.colum-2.image img{
+    width: 500px;
+}
+
+.header-content .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.letters {
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    width: 7%;
+    opacity: 0.06;    
+}
+
+.shapes .shape {
+    position: absolute;
+    width: 40px;
+    opacity: 0.2;
+}
+
+.shape.circle {
+    top: 20%;
+    left: 40%;
+}
+
+.shape.half-circle {
+    top: 30%;
+    right: 20%;
+    width: 30px;
+}
+
+.shape.x {
+    bottom: 20%;
+    left: 20%;
+    width: 30px;
+}
+
+.shape.triangle {
+    top: 10%;
+    right: 5%;
+}
+
+.shape.square {
+    bottom: 10%;
+    left: 45%;
+}
+
+.shape.wave-1 {
+    top: 30%;
+    left: 10%;
+    width: 50px;
+}
+
+.shape.wave-2 {
+    top: 60%;
+    right: 10%;
+    width: 60px;
+}
+
+.point{
+    position: absolute;
+    width: 20%;
+    opacity: 0.2;
+}
+
+.point-1 {
+    left: 0;
+    bottom: 0;
+}
+
+.point-2 {
+    right: 0;
+    bottom: 0;
+}
+/* Ends Header Style */
+
+
+/* Services */
+
+
+.section-header .title::before {
+    content: attr(data-title);
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--main-color);
+    line-height: .5;
+}
+
+.section-header .title::after {
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background-color: var(--main-color);
+    margin-top: 1rem;
+    border-radius: 2rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: var(--light-three);
+    max-width: 400px;
+    min-height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    transition: 0.3s;
+}
+
+.card::before {
+    content: attr(data-title);
+    position: absolute;
+    top: 0;
+    right: -15px;
+    font-size: 8rem;
+    font-weight: 900;
+    color: var(--main-color);
+    opacity: 0.03;
+}
+
+.card::after {
+    content: "";
+    height: 6px;
+    width: 100%;
+    position: absolute;
+    bottom: -6px;
+    background-color: var(--main-color);
+    /* display: none; */
+    transition: 0.3s;
+}
+
+.card-wrap:hover .card{
+    transform: translateY(-15px);
+}
+
+.card-wrap:hover .card::after {
+    bottom: 0;
+}
+
+.cards img {
+    width: 70px;
+}
+
+.card-content {
+    font-size: 1.6rem;
+    margin: 10px 0;
+}
+
+.small {
+    padding: .6rem 1rem;
+}
+
+/* End Services */

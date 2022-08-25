@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+
+
+:root{
+    --dark-one: #333;
+    --dark-two: #7a7a7a;
+    --main-color: #784cfb;
+    --light-one: #fff;
+    --light-two: #f9fafb;
+    --light-three: #f6f7fb;
+}
+
+/* Variables End */
+
+
+
+body, button, input, textarea{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+
+img {
+    width: 100%;
+}
+
+
+.container {
+    max-width: 92rem;
+    margin: 0 auto;
+    padding: 0 4rem;
+    position: relative;
+    /* background-color: red; */
+    z-index: 5;
+}
+
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    font-size: 1.25rem;
+    color: var(--dark-two);
+    line-height: 1.6;
+}
+
+/* General style ended */
+
+/* Header */
+
+
+header {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--light-two);
+}
+
+
+nav {
+    position: relative;
+    width: 100%;
+    z-index: 50;
+}
+
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+
+.logo{
+    width: 80px;
+}
+
+
+.links ul{
+    display: inline-flex;
+    /* gap: 10px; */
+    /* 
+    We will set the gap between links by giving css to anchor tag
+     */
+}
+
+
+.links a{
+    display: inline-block;
+    /* 
+    We are setting the display to inline block because the default is inline for anchor tags.
+    By inline display we cannot change width and height later on
+    And we cannot handle margin and padding of inline elements
+    */
+    padding: 0.9rem 1.2rem;
+    color: var(--dark-one);
+    text-transform: uppercase;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1;
+    transition: .3s;
+}
+
+
+.links a.active{
+    background-color: var(--main-color);
+    color: var(--light-one);
+    border-radius: 2rem;
+    font-size: 1rem;
+    padding: 0.9rem 2.1rem;
+    margin-left: 1rem;
+}
+
+
+.links a:hover{
+    color: var(--main-color);
+}
+
+
+.links a.active:hover {
+    color: var(--light-one);
+    background-color: #5c29f3;
+}
+
+
+.header-content .container.grid-2 {
+    grid-template-columns: 2.5fr 3.5fr;
+    min-height: calc(100vh - 4rem);
+    /* justify-content: space-between; */
+    padding-bottom: 2.5rem;
+}
+
+
+.column-1 {
+    margin-right: 1.5rem;
+}
+
+
+.column-2 {
+    margin-left: 1.5rem;
+}
+
+
+.header-title {
+    line-height: 0.8;
+    font-size: 2.5rem;
+    color: var(--dark-one);
+}
+
+
+.header-content .text {
+    margin: 2.15rem 0;
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background-color: var(--main-color);
+    color: var(--light-one);
+    border-radius: 2rem;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+
+.btn:hover {
+    background-color: #5c29f3;
+}
+
+.header-content .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-content .image .image-element {
+    max-width: 500px;
+}
+
+/* Header Ends  Here */
